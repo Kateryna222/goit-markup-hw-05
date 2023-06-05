@@ -223,7 +223,7 @@ body {
   align-items: center;
   justify-content: center; 
 
-transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -320,7 +320,7 @@ transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 
   color: #404bbf;;
   position: relative;
   
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -357,7 +357,7 @@ transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 
   color: var(--primary-text-color);  
   font-style: normal;
 
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }  
   
 .header-contacts:hover,
@@ -546,7 +546,7 @@ transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 
   color: var(--icon-customers);
 
 
-transition-property: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .customers-list-link:hover,
@@ -648,7 +648,7 @@ overflow: hidden;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   transform: translate(0, 100%);
-  transition-property: transform v250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-link:hover .overlay,
 .projects-link:focus .overlay {
@@ -723,7 +723,7 @@ overflow: hidden;
   align-items: center;
   justify-content: center; 
 
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -742,7 +742,14 @@ overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+  }
 
 .modal {
   position: absolute;
@@ -752,7 +759,7 @@ overflow: hidden;
   width: 408px;
   min-height: 584px;
   background-color: var(--modal-window);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
   border-radius: 4px; 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -775,6 +782,7 @@ overflow: hidden;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
+
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
@@ -786,21 +794,13 @@ overflow: hidden;
 }
 
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:hover .modal-close-icon {
   fill: #ffffff;
 }
 
 
 
-
-
-.is-hidden {
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
-
-}
 
 
 
