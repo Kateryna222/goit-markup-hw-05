@@ -314,10 +314,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
-  color: #404bbf;;
-  position: relative;
+  color: #404bbf;
   
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -326,8 +324,15 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
   background-color: var(--primary-white-color);
 }
 
+.current {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primary-white-color);
+}
 
-.menu-link::after {
+
+.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -792,8 +797,8 @@ overflow: hidden;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+.modal-close-icon:hover .modal-close-icon,
+.modal-close-icon:focus .modal-close-icon {
   fill: #ffffff;
 }
 
